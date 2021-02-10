@@ -5,12 +5,12 @@
     </div>
   </div>
 
-  <div class="td-page-wrapper" *ngIf="acoes; else blocoelse">
+  <div class="td-page-wrapper" *ngIf="acoes; else elseBlock">
     <div class="po-row">
       <div class="po-md-4" *ngFor="let acao of acoes">
         <app-card-acoes [acao]="acao"></app-card-acoes>
       </div>
     </div>
   </div>
-  <ng-template #blocoelse>Não há dados para exibir</ng-template>
+  <ng-template #elseBlock><p>Não Há dados</p></ng-template>
 </po-page-default>
